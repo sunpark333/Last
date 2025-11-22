@@ -181,7 +181,7 @@ class ProgressManager:
     def __init__(self):
         self.user_progress: Dict[int, UserProgress] = defaultdict(UserProgress)
     
-    def calculate_progress(self, done: int, total: int, user_id: int, uploader: str = "SpLib") -> str:
+    def calculate_progress(self, done: int, total: int, user_id: int, uploader: str = "SpyLib") -> str:
         user_data = self.user_progress[user_id]
         percent = (done / total) * 100
         progress_bar = "♦" * int(percent // 10) + "◇" * (10 - int(percent // 10))
