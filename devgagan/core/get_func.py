@@ -484,7 +484,7 @@ class SmartTelegramBot:
                     pass
 
     async def upload_with_telethon(self, file_path: str, user_id: int, target_chat_id: int, caption: str, topic_id: Optional[int] = None, edit_msg=None):
-        """Upload using Telethon (SpLib) with enhanced features"""
+        """Upload using Telethon (SpyLib) with enhanced features"""
         try:
             if edit_msg:
                 await edit_msg.delete()
