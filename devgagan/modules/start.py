@@ -73,43 +73,34 @@ help_pages = [
         "> Transfer premium to your beloved major purpose for resellers (Premium members only)\n\n"
         "4. **/get**\n"
         "> Get all user IDs (Owner only)\n\n"
-        "5. **/lock**\n"
-        "> Lock channel from extraction (Owner only)\n\n"
-        "6. **/dl link**\n"
-        "> Download videos (Not available in v3 if you are using)\n\n"
-        "7. **/adl link**\n"
-        "> Download audio (Not available in v3 if you are using)\n\n"
-        "8. **/login**\n"
+        "5. **/login**\n"
         "> Log into the bot for private channel access\n\n"
-        "9. **/batch**\n"
+        "6. **/batch**\n"
         "> Bulk extraction for posts (After login)\n\n"
     ),
     (
         "📝 **Bot Commands Overview (2/2)**:\n\n"
-        "10. **/logout**\n"
+        "7. **/logout**\n"
         "> Logout from the bot\n\n"
-        "11. **/stats**\n"
+        "8. **/stats**\n"
         "> Get bot stats\n\n"
-        "12. **/plan**\n"
+        "9. **/plan**\n"
         "> Check premium plans\n\n"
-        "13. **/speedtest**\n"
+        "10. **/speedtest**\n"
         "> Test the server speed (not available in v3)\n\n"
-        "14. **/terms**\n"
+        "11. **/terms**\n"
         "> Terms and conditions\n\n"
-        "15. **/cancel**\n"
+        "12. **/cancel**\n"
         "> Cancel ongoing batch process\n\n"
-        "16. **/myplan**\n"
+        "13. **/myplan**\n"
         "> Get details about your plans\n\n"
-        "17. **/session**\n"
-        "> Generate Pyrogram V2 session\n\n"
-        "18. **/settings**\n"
         "> 1. SETCHATID : To directly upload in channel or group or user's dm use it with -100[chatID]\n"
         "> 2. SETRENAME : To add custom rename tag or username of your channels\n"
         "> 3. CAPTION : To add custom caption\n"
         "> 4. REPLACEWORDS : Can be used for words in deleted set via REMOVE WORDS\n"
         "> 5. RESET : To set the things back to default\n\n"
         "> You can set CUSTOM THUMBNAIL, PDF WATERMARK, VIDEO WATERMARK, SESSION-based login, etc. from settings\n\n"
-        "**__Powered by Team SPY__**"
+        "**__Powered by unknown man__**"
     )
 ]
  
@@ -183,7 +174,7 @@ async def terms(client, message):
     buttons = InlineKeyboardMarkup(
         [
             [InlineKeyboardButton("📋 See Plans", callback_data="see_plan")],
-            [InlineKeyboardButton("💬 Contact Now", url="https://t.me/kingofpatal")],
+            [InlineKeyboardButton("💬 Contact Now", url="https://t.me/Pre_contact_bot")],
         ]
     )
     await message.reply_text(terms_text, reply_markup=buttons)
@@ -192,17 +183,31 @@ async def terms(client, message):
 @app.on_message(filters.command("plan") & filters.private)
 async def plan(client, message):
     plan_text = (
-        "> 💰 **Premium Price**:\n\n Starting from $2 or 200 INR accepted via **__Amazon Gift Card__** (terms and conditions apply).\n"
-        "📥 **Download Limit**: Users can download up to 100,000 files in a single batch command.\n"
-        "🛑 **Batch**: You will get two modes /bulk and /batch.\n"
-        "   - Users are advised to wait for the process to automatically cancel before proceeding with any downloads or uploads.\n\n"
-        "📜 **Terms and Conditions**: For further details and complete terms and conditions, please send /terms.\n"
+        "🌟 **Subscription Tiers** 🌟\n\n"
+        "**Basic Tier** (price:Rs 29/ 🇮🇳 1 weak):\n"
+        "✅ 500GB Bandwidth\n"
+        "✅ 10 Concurrent Jobs\n"
+        "✅ Standard Support\n\n"
+        "**Pro Tier** (price:Rs 49/ 🇮🇳 2 weak):\n"
+        "✅ 2TB Bandwidth\n"
+        "✅ 25 Concurrent Jobs\n"
+        "✅ /batch save 5000 videos in one command\n"
+        "✅ Custom Branding\n\n"
+        "**Enterprise Tier** (price:Rs 100/ 🇮🇳 /month):\n"
+        "✅ Unlimited Bandwidth\n"
+        "✅ 50 Concurrent Jobs\n"
+        "✅ 24/7 Support\n"
+        "✅ Dedicated Resources\n\n"
+        "All plans include:\n"
+        "- Batch Processing\n"
+        "- Multi-format Support\n"
+        "- Cloud Integration\n"
     )
      
     buttons = InlineKeyboardMarkup(
         [
             [InlineKeyboardButton("📜 See Terms", callback_data="see_terms")],
-            [InlineKeyboardButton("💬 Contact Now", url="https://t.me/kingofpatal")],
+            [InlineKeyboardButton("💬 Contact Now", url="https://t.me/Pre_contact_bot")],
         ]
     )
     await message.reply_text(plan_text, reply_markup=buttons)
@@ -211,17 +216,31 @@ async def plan(client, message):
 @app.on_callback_query(filters.regex("see_plan"))
 async def see_plan(client, callback_query):
     plan_text = (
-        "> 💰**Premium Price**\n\n Starting from $2 or 200 INR accepted via **__Amazon Gift Card__** (terms and conditions apply).\n"
-        "📥 **Download Limit**: Users can download up to 100,000 files in a single batch command.\n"
-        "🛑 **Batch**: You will get two modes /bulk and /batch.\n"
-        "   - Users are advised to wait for the process to automatically cancel before proceeding with any downloads or uploads.\n\n"
-        "📜 **Terms and Conditions**: For further details and complete terms and conditions, please send /terms or click See Terms👇\n"
+        "🌟 **Subscription Tiers** 🌟\n\n"
+        "**Basic Tier** (price:Rs 29/ 🇮🇳 1 weak):\n"
+        "✅ 500GB Bandwidth\n"
+        "✅ 10 Concurrent Jobs\n"
+        "✅ Standard Support\n\n"
+        "**Pro Tier** (price:Rs 49/ 🇮🇳 2 weak):\n"
+        "✅ 2TB Bandwidth\n"
+        "✅ 25 Concurrent Jobs\n"
+        "✅ /batch save 5000 videos in one command\n"
+        "✅ Custom Branding\n\n"
+        "**Enterprise Tier** (price:Rs 100/ 🇮🇳 /month):\n"
+        "✅ Unlimited Bandwidth\n"
+        "✅ 50 Concurrent Jobs\n"
+        "✅ 24/7 Support\n"
+        "✅ Dedicated Resources\n\n"
+        "All plans include:\n"
+        "- Batch Processing\n"
+        "- Multi-format Support\n"
+        "- Cloud Integration\n"
     )
      
     buttons = InlineKeyboardMarkup(
         [
             [InlineKeyboardButton("📜 See Terms", callback_data="see_terms")],
-            [InlineKeyboardButton("💬 Contact Now", url="https://t.me/kingofpatal")],
+            [InlineKeyboardButton("💬 Contact Now", url="https://t.me/Pre_contact_bot")],
         ]
     )
     await callback_query.message.edit_text(plan_text, reply_markup=buttons)
@@ -239,7 +258,7 @@ async def see_terms(client, callback_query):
     buttons = InlineKeyboardMarkup(
         [
             [InlineKeyboardButton("📋 See Plans", callback_data="see_plan")],
-            [InlineKeyboardButton("💬 Contact Now", url="https://t.me/kingofpatal")],
+            [InlineKeyboardButton("💬 Contact Now", url="https://t.me/Pre_contact_bot")],
         ]
     )
     await callback_query.message.edit_text(terms_text, reply_markup=buttons)
