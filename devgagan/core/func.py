@@ -43,7 +43,7 @@ async def subscribe(app, message):
             return 1
       except UserNotParticipant:
         caption = f"Join our channel to use the bot"
-        await message.reply_photo(photo="https://envs.sh/F6T.jpg",caption=caption, reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("Join Now...", url=f"{url}")]]))
+        await message.reply_photo(photo="https://i.postimg.cc/vH7NtYnn/file-00000000df88622fab8ba266a852d070.png",caption=caption, reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("Join Now...", url=f"{url}")]]))
         return 1
       except Exception:
          await message.reply_text("Something Went Wrong. Contact us @Pre_contact_bot...")
